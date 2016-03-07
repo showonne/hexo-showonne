@@ -1,0 +1,6 @@
+<span class="banner"><a href="/"><%= config.title %></a></span>
+<ul>
+    <% for(var i in theme.menu){ %>
+        <li><a href="<%- url_for(theme.menu[i]) %>" ><%= i %></a></li>
+    <% } %>
+</ul>

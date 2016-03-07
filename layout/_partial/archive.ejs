@@ -1,0 +1,26 @@
+<% if(type === 'index'){ %>
+  <% site.posts.each(function(post){ %>
+    <%- partial('article', {post: post, type: 'index'}) %>
+  <% }) %>
+<% }else if( type === 'archive' ){ %>
+  <div class="archive">
+    <% var lastyear; %>
+    <% page.posts.each(function(post){ %>
+      <% var year = post.date.year() %>
+      <% if(lastyear !== year){ %>
+        <h4 class="year"><%= year %></h4>
+        <% lastyear = year %>
+      <% } %>
+      <div class="archive_item">
+        <a class="title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+        <span class="date"><%= post.date.format('YYYY-MM-DD') %></span>
+      </div>
+    <% }) %>
+  </div>
+<% }else if(type === 'categories'){ %>
+  <div>show</div>
+  <%= page.categories %>
+<% }else if(type === 'tags'){ %>
+
+  <%= site.tags %>
+<% } %>

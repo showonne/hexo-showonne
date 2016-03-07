@@ -1,0 +1,22 @@
+<% if(type === 'index'){ %>
+    <article>
+        <h4 class="title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></h4>
+        <h6 class="date"><%= post.date.format('YYYY-MM-DD') %></h6>
+        <%- list_tags(post.tags, {
+            show_count: false,
+            class: 'article-tag'
+        }) %>
+        <section class="md content">
+            <%- post.content %>
+        </section>
+    </article>
+<% }else if (type === 'post'){ %>
+    <h1><%= post.title %></h1>
+    <article class="md">
+        <%- post.content %>
+    </article>
+<% }else if(type === 'about'){ %>
+    <article class="md">
+        <%- page.content %>
+    </article>
+<% } %>
