@@ -1,17 +1,10 @@
-<% if(type === 'index'){ %>
-  <% page.posts.each(function(post, index){ %>
-      <%- partial('article', {post: post, type: 'index'}) %>
-  <% }) %>
-  <div class="pagination">
-    <%- paginator({ total: Math.ceil(site.posts.length / config.per_page)}) %>
-  </div>
-<% }else if( type === 'archive' ){ %>
+<% if( type === 'archive' ){ %>
   <div class="archive">
     <% var lastyear; %>
     <% page.posts.each(function(post){ %>
       <% var year = post.date.year() %>
       <% if(lastyear !== year){ %>
-        <h4 class="year"><a href="/archives/<%= year %>"><%= year %></a></h4>
+        <h4 class="year"><%= year %></h4>
         <% lastyear = year %>
       <% } %>
       <div class="archive_item">
@@ -19,10 +12,10 @@
         <span class="date"><%= post.date.format('YYYY-MM-DD') %></span>
       </div>
     <% }) %>
+    <div class="pagination">
+      <%- paginator({ total: Math.ceil(site.posts.length / config.per_page)}) %>
+    </div>
   </div>
-<% }else if(type === 'categories'){ %>
-  <div>show</div>
-  <%= page.categories %>
 <% }else if(type === 'tags'){ %>
   <div class="tags">
     <h1><%= page.tag %></h1>

@@ -7,7 +7,6 @@
             class: 'article-tag'
         }) %>
         <section class="md content">
-            <% console.log(post.excerpt)%>
             <% if(!/^\s*$/.test(post.excerpt)){ %>
                 <%- post.excerpt %>
             <% }else{ %>
@@ -15,7 +14,7 @@
             <% } %>
         </section>
         <% if(!/^\s*$/.test(post.excerpt)){ %>
-            <a href="<%- url_for(post.path) %>" class="more">More +</a>
+            <a href="<%- url_for(post.path) %>" class="more"><%= theme.excerpt_link %></a>
         <% } %>
     </article>
 <% }else if (post.title !== 'tags'){ %>

@@ -1,1 +1,6 @@
-<%- partial('_partial/archive', {type: 'index'}) %>
+<% page.posts.each(function(post, index){ %>
+<%- partial('_partial/article', {post: post, type: 'index'}) %>
+<% }) %>
+<div class="pagination">
+	<%- paginator({ total: Math.ceil(site.posts.length / config.per_page)}) %>
+</div>

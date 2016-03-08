@@ -1,3 +1,5 @@
+@import "_md";
+
 *{
     margin: 0;
     padding: 0;
@@ -233,46 +235,5 @@ footer{
         a{
             color: #B9BBBD;
         }
-    }
-}
-
-.md{
-    h2{
-        padding-top: 10px;
-    }
-    ul{
-        list-style: circle;
-        margin: 1em 0;
-        padding: 0 20px;
-    }
-    code{
-        background: rgb(38, 50, 56);
-        color: #fff;
-        padding: 0 0.3em;
-        line-height: 1.5;
-    }
-    .headerlink{
-        border-top: 1px solid #000;
-        display: block;
-    }
-    *{
-        margin: 4px 0;
-    }
-    p{
-        margin: 10px 0;
-        line-height: 1.5;
-    }
-    a{
-        text-decoration: none;
-        color: #0b96a5;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-    figure, pre{
-        padding: 4px 10px;
-        background: rgb(38, 50, 56);
-        color: #fff;
-        overflow: scroll;
     }
 }

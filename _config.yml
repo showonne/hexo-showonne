@@ -5,7 +5,9 @@ menu:
   Tags: /tags
   About: /about
 
-rss: /atom.xml
+# Author
+author: Showonne
+
 
 # Content
-excerpt_link: Read More
+excerpt_link: More +
