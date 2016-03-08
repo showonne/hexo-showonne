@@ -7,16 +7,15 @@
             class: 'article-tag'
         }) %>
         <section class="md content">
-            <%- post.content %>
+            <%- post.excerpt %>
         </section>
+        <a href="<%- url_for(post.path) %>" class="more">More +</a>
     </article>
-<% }else if (type === 'post'){ %>
+<% }else if (post.title !== 'tags'){ %>
     <h1><%= post.title %></h1>
     <article class="md">
         <%- post.content %>
     </article>
-<% }else if(type === 'about'){ %>
-    <article class="md">
-        <%- page.content %>
-    </article>
+<% }else if(post.title === 'tags'){ %>
+    <%- list_tags() %>
 <% } %>

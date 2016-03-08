@@ -119,15 +119,57 @@ header ul li a:hover {
 .main article .content {
   padding: 40px 0;
 }
+/* line 102, ../sass/style.scss */
+.main article .more {
+  text-decoration: none;
+  color: #ff9123;
+  font-size: 18px;
+  font-style: oblique;
+}
+/* line 107, ../sass/style.scss */
+.main article .more:hover {
+  text-decoration: underline;
+  color: #ffb523;
+}
+/* line 114, ../sass/style.scss */
+.main .tag-list {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 100px;
+  justify-content: flex-start;
+  padding: 0 40px;
+}
+/* line 121, ../sass/style.scss */
+.main .tag-list .tag-list-item {
+  margin: 20px 20px;
+}
+/* line 123, ../sass/style.scss */
+.main .tag-list .tag-list-item .tag-list-link {
+  text-decoration: none;
+  background: #ff9123;
+  padding: 10px 20px;
+  color: #e80000;
+}
+/* line 128, ../sass/style.scss */
+.main .tag-list .tag-list-item .tag-list-link:hover {
+  background: #ffb523;
+}
+/* line 132, ../sass/style.scss */
+.main .tag-list .tag-list-item .tag-list-count {
+  background: #e80000;
+  color: #ff9123;
+  padding: 10px 10px;
+}
 
-/* line 105, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .archive {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
-/* line 110, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 .archive .year {
   font-size: 24px;
   font-weight: 800;
@@ -137,57 +179,153 @@ header ul li a:hover {
   text-align: center;
   margin-top: 40px;
 }
-/* line 119, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
+.archive .year a {
+  text-decoration: none;
+  color: #666;
+}
+/* line 159, ../sass/style.scss */
 .archive .archive_item {
   width: 80%;
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
 }
-/* line 120, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 .archive .archive_item .title {
   color: #555555;
   text-decoration: none;
 }
-/* line 123, ../sass/style.scss */
+/* line 163, ../sass/style.scss */
 .archive .archive_item .title:hover {
   color: #ff7423;
 }
-/* line 130, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 .archive .archive_item .date {
   float: right;
 }
 
-/* line 136, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
+.tags {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+/* line 181, ../sass/style.scss */
+.tags .tag_item {
+  width: 80%;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+/* line 182, ../sass/style.scss */
+.tags .tag_item .title {
+  color: #555555;
+  text-decoration: none;
+}
+/* line 185, ../sass/style.scss */
+.tags .tag_item .title:hover {
+  color: #ff7423;
+}
+/* line 192, ../sass/style.scss */
+.tags .tag_item .date {
+  float: right;
+}
+
+/* line 198, ../sass/style.scss */
+.pagination {
+  margin-top: 30px;
+}
+/* line 200, ../sass/style.scss */
+.pagination a {
+  color: #ff7b23;
+  text-decoration: none;
+}
+/* line 203, ../sass/style.scss */
+.pagination a:hover {
+  text-decoration: underline;
+}
+/* line 207, ../sass/style.scss */
+.pagination .page-number {
+  margin: 0 10px;
+}
+/* line 210, ../sass/style.scss */
+.pagination .prev {
+  margin-right: 4px;
+}
+/* line 213, ../sass/style.scss */
+.pagination .next {
+  margin-left: 4px;
+}
+/* line 216, ../sass/style.scss */
+.pagination .current {
+  color: #ff3232;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* line 223, ../sass/style.scss */
 footer {
   background: #171F26;
   width: 100%;
-  height: 40px;
+  height: 60px;
   color: #B9BBBD;
   font-size: 12px;
   display: flex;
   justify-content: center;
 }
-/* line 144, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 footer .info {
-  line-height: 40px;
+  line-height: 60px;
 }
-/* line 146, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 footer .info a {
   color: #B9BBBD;
 }
 
-/* line 153, ../sass/style.scss */
-.md .highlight {
-  background: #171F26;
-  color: #fff;
-  padding: 4px 0;
+/* line 240, ../sass/style.scss */
+.md h2 {
+  padding-top: 10px;
 }
-/* line 158, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
+.md ul {
+  list-style: circle;
+  margin: 1em 0;
+  padding: 0 20px;
+}
+/* line 248, ../sass/style.scss */
+.md code {
+  background: #263238;
+  color: #fff;
+  padding: 0 0.3em;
+  line-height: 1.5;
+}
+/* line 254, ../sass/style.scss */
+.md .headerlink {
+  border-top: 1px solid #000;
+  display: block;
+}
+/* line 258, ../sass/style.scss */
 .md * {
   margin: 4px 0;
 }
-/* line 162, ../sass/style.scss */
-.md p a {
+/* line 261, ../sass/style.scss */
+.md p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+/* line 265, ../sass/style.scss */
+.md a {
   text-decoration: none;
   color: #0b96a5;
+}
+/* line 268, ../sass/style.scss */
+.md a:hover {
+  text-decoration: underline;
+}
+/* line 272, ../sass/style.scss */
+.md figure, .md pre {
+  padding: 4px 10px;
+  background: #263238;
+  color: #fff;
+  overflow: scroll;
 }
