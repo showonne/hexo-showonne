@@ -1,8 +1,6 @@
 <% if(type === 'index'){ %>
-  <% site.posts.each(function(post, index){ %>
-    <% if((index >= (page.current - 1) * config.per_page) && (index <= page.current * config.per_page)){ %>
+  <% page.posts.each(function(post, index){ %>
       <%- partial('article', {post: post, type: 'index'}) %>
-    <% } %>
   <% }) %>
   <div class="pagination">
     <%- paginator({ total: Math.ceil(site.posts.length / config.per_page)}) %>
