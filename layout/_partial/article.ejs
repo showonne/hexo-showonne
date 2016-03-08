@@ -7,9 +7,16 @@
             class: 'article-tag'
         }) %>
         <section class="md content">
-            <%- post.excerpt %>
+            <% console.log(post.excerpt)%>
+            <% if(!/^\s*$/.test(post.excerpt)){ %>
+                <%- post.excerpt %>
+            <% }else{ %>
+                <%- post.content %>
+            <% } %>
         </section>
-        <a href="<%- url_for(post.path) %>" class="more">More +</a>
+        <% if(!/^\s*$/.test(post.excerpt)){ %>
+            <a href="<%- url_for(post.path) %>" class="more">More +</a>
+        <% } %>
     </article>
 <% }else if (post.title !== 'tags'){ %>
     <h1><%= post.title %></h1>
