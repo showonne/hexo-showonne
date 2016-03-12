@@ -12,5 +12,8 @@
     "showonne"
   ],
   "author": "showonne",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.4.2"
+  }
 }
