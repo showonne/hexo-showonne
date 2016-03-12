@@ -11,23 +11,60 @@ html, body{
 
 header{
     height: 50px;
+    width: 100%;
     background: #ff5722;
-    position: relative;
+    position: fixed;
     color: #fff;
     .banner{
         position: absolute;
-        left: 40px;
+        left: 20px;
+        top: 18px;
         font-weight: 800;
-        line-height: 50px;
         a{
             color: #fff;
             text-decoration: none;
         }
     }
-    ul{
+    .menu{
+        position: absolute;
+        display: none;
+        right: 20px;
+        top: 18px;
+
+        @media screen and (max-width: 376px){
+            display: block;
+        }
+    }
+    .menu_list{
+        display: block;
         position: absolute;
         right: 0;
         list-style: none;
+        transition: all .1s ease-out;
+
+        @media screen and (max-width: 376px){
+            top: 50px;
+            width: 100%;
+            background: #ccc;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+
+            
+        }
+
+        &.hide{
+            @media screen and (max-width: 376px){
+                transform: translate3d(-100%, 0, 0);
+            }
+        }
+
+        &.show{
+            @media screen and (max-width: 376px){
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
         li{
             float: left;
             a{
@@ -36,8 +73,14 @@ header{
                 line-height: 50px;
                 font-size: 16px;
                 text-decoration: none;
+                display: inline-block;
+                height: 100%;
+                width: 100%;
                 &:hover{
                     text-decoration: underline;
+                }
+                @media screen and (max-width: 376px){
+                    padding: 0;
                 }
             }
         }
@@ -54,14 +97,21 @@ header{
     align-items: center;
     padding: 60px 0;
     min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    @media screen and (max-width: 376px){
+        padding-top: 80px;
+    }
 
     article{
-        width: 1000px;
+        width: 80%;
         min-height: 60px;
         margin: 20px 0;
         padding: 10px 10px;
         .title{
-            height: 40px;
+            overflow: hidden;
+            word-break: break-all;
             a{
                 padding: 0 0 4px 0;
                 display: block;
