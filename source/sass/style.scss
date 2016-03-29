@@ -135,6 +135,9 @@ header{
             li{
                 float: left;
                 margin-right: 10px;
+                @media screen and (max-width: 376px){
+                    margin-bottom: 12px;
+                }
                 a{
                     text-decoration: none;
                     color: #fff;
