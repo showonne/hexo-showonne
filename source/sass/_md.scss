@@ -1,13 +1,3 @@
 code.hljs{
     margin: 10px;
 }
-
-.post-content{
-    &>p, ul, ol{
-        & code{
-            background: #f0f0f0;
-            padding: 0 4px;
-            color: #C7254E;
-        }
-    }
-}

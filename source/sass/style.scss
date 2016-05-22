@@ -1,9 +1,5 @@
-@import "_md";
-
-*{
-    margin: 0;
-    padding: 0;
-}
+@import "reset";
+@import "md";
 
 html, body{
     height: 100%;
@@ -114,7 +110,6 @@ header{
         padding: 10px 10px;
         
         .post-title{
-            overflow: hidden;
             word-break: break-all;
             a{
                 font-family: 'Georgia', "Hiragino Sans GB", serif;
@@ -179,17 +174,31 @@ header{
 
                 }
             }
+            &>p, ul, ol{
+                & code{
+                    background: #f0f0f0;
+                    padding: 0 4px;
+                    color: #C7254E;
+                }
+            }
             a{
                 color: blue;
             }
-            blockquote.blockquote-center{
-                margin: 10px 10px;
-                padding: 20px 0;
-                font-size: 24px;
-                text-align: center;
-                color: black;
-                font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
-                background: #f0f0f0;
+            blockquote{
+                p{
+                    background: #f0f0f0;
+                    padding: 4px 4px;
+                }
+                &.blockquote-center{
+                    margin: 10px 10px;
+                    padding: 20px 0;
+                    color: black;
+                    background: #f0f0f0;
+                    margin: 10px 10px;
+                    font-size: 24px;
+                    text-align: center;
+                    font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
+                }
             }
         }
         .more{
