@@ -8,6 +8,8 @@ Hexo Theme
 ##Usage
 Change setting `theme` to `showonne` in `config.yml`
 
+Modify configurations in config.yml
+
 ##Update
     $ cd themes/showonne
     $ git pull
