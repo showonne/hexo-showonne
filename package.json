@@ -12,7 +12,7 @@
     "showonne"
   ],
   "author": "showonne",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "node-sass": "^3.4.2"
   }
