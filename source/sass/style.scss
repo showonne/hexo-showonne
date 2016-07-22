@@ -1,5 +1,5 @@
 @import "reset";
-@import "md";
+@import "icon";
 
 html, body{
     height: 100%;
@@ -67,7 +67,7 @@ header{
                 color: #fff;
                 padding:0 14px;
                 line-height: 50px;
-                font-size: 16px;
+                font-size: 1em;
                 text-decoration: none;
                 display: inline-block;
                 height: 100%;
@@ -95,6 +95,7 @@ header{
     min-height: 100%;
     width: 100%;
     overflow: hidden;
+    background: #fbfbfb;
 
     @media screen and (max-width: 376px){
         padding-top: 80px;
@@ -104,27 +105,34 @@ header{
         @media screen and (max-width: 376px){
             width: 80%;
         }
-        width: 50%;
+        width: 60%;
         min-height: 60px;
         margin: 20px 0;
         padding: 10px 10px;
         
         .post-title{
             word-break: break-all;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            &:hover{
+                color: #FF5722;
+                transition: color ease .2s;
+            }
             a{
                 font-family: 'Georgia', "Hiragino Sans GB", serif;
-                transition: color ease .2s;
-                padding: 0 0 4px 0;
                 display: block;
-                font-size: 28px;
+                font-size: 2.2em;
+                line-height: 1.35em;
                 font-weight: normal;
                 width: 100%;
                 text-decoration: none;
-                border-bottom: 1px solid #ccc;
-                color: #000;
-                &:hover{
-                    color: #FF5722;
-                }
+                color: inherit;
+                padding-left: 20px;
+            }
+            i{
+                font-size: 2em;
             }
             span{
                 font-family: 'Georgia', "Hiragino Sans GB", serif;
@@ -136,7 +144,11 @@ header{
         .date{
             display: inline-block;
             font-size: 14px;
-            margin-top: 4px;
+            margin-top: 10px;
+            i{
+                vertical-align: bottom;
+                margin-right: 10px;
+            }
         }
         .article-tag-list{
             margin: 10px 0;
@@ -162,6 +174,7 @@ header{
         }
         .post-content{
             padding: 40px 0;
+            color: #555;
             line-height: 1.2;
             ul, ol{
                 padding-left: 16px;
