@@ -1,4 +1,4 @@
-<% if(type === 'index'){ %>
+<% if(index){ %>
     <article>
         <h4 class="post-title"><i class="iconfont">&#xe609;</i><a href="<%- url_for(post.path) %>"><%= post.title %></a></h4>
         <h6 class="date"><i class="iconfont">&#xf0069;</i><%= post.date.format('YYYY-MM-DD') %></h6>
@@ -17,7 +17,7 @@
             <a href="<%- url_for(post.path) %>" class="more"><%= theme.excerpt_link %></a>
         <% } %>
     </article>
-<% }else if (post.title !== 'tags'){ %>
+<% }else if (page.title !== 'tags'){ %>
     <article>
         <h1 class='post-title'>
             <span><%= post.title %></span>
@@ -25,7 +25,7 @@
         <section class='post-content'>
             <%- post.content %>
         </section>
-        <% if (config.duoshuo_shortname){ %>
+        <% if (!index && post.comments && config.duoshuo_shortname){ %>
           <section id="comments" >
             <!-- 多说评论框 start -->
             <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
@@ -45,7 +45,7 @@
             <!-- 多说公共JS代码 end -->
           </section>
         <% } %>
-        </article>
-<% }else if(post.title === 'tags'){ %>
+    </article>
+<% }else if(page.title === 'tags'){ %>
     <%- list_tags() %>
 <% } %>
