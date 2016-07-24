@@ -201,7 +201,7 @@ header{
                 &>img{
                     display: block;
                     margin: 0 auto 10px;
-
+                    max-width: 100%;
                 }
             }
             &>p, ul, ol{
@@ -248,6 +248,10 @@ header{
                     text-align: center;
                     font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
                 }
+            }
+            .video-container{
+                display: flex;
+                justify-content: center;
             }
         }
         .more{
