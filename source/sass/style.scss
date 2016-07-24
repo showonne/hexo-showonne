@@ -1,3 +1,4 @@
+@import "variable";
 @import "reset";
 @import "icon";
 
@@ -8,7 +9,7 @@ html, body{
 header{
     height: 50px;
     width: 100%;
-    background: #ff5722;
+    background: $header-bg;
     position: fixed;
     color: #fff;
     .banner{
@@ -116,9 +117,10 @@ header{
             display: flex;
             align-items: center;
             padding-bottom: 10px;
+            color: $title;
+            transition: color ease .2s;
             &:hover{
-                color: #FF5722;
-                transition: color ease .2s;
+                color: $title-hover;
             }
             a{
                 font-family: 'Georgia', "Hiragino Sans GB", serif;
@@ -165,9 +167,10 @@ header{
                     width: 100%;
                     height: 100%;
                     padding: 4px 8px;
-                    background: #ff4e44;
+                    background: $tag;
+                    transition: background ease .2s;
                     &:hover{
-                        background: #ff2323;
+                        background: $tag-hover;
                     }
                 }
             }
@@ -179,8 +182,11 @@ header{
             ul, ol{
                 padding-left: 16px;
             }
+            p{
+                font-size: 1.2em;
+            }
             &>p{
-                margin: 15px 0;
+                margin: 1em 0;
                 line-height: 1.5;
                 &>img{
                     display: block;
@@ -190,18 +196,22 @@ header{
             }
             &>p, ul, ol{
                 & code{
-                    background: #eaeef3;
+                    background: $code-bg;
                     padding: 0 4px;
-                    color: #0048ab;
+                    color: $code-color;
                 }
             }
             a{
-                color: blue;
+                color: $link;
+                transition: color ease .2s;
+                &:hover{
+                    color: $link-hover;
+                }
             }
             blockquote{
                 padding: 0 20px;
                 border: 1px solid #e3e3e3;
-                border-left: 5px solid #ddd;
+                border-left: 5px solid $blockquote-border-left;
                 margin: 1em;
                 p{
                     margin: 1em 0;
@@ -232,12 +242,12 @@ header{
         }
         .more{
             text-decoration: none;
-            color: #ff9123;
-            font-size: 18px;
+            color: $more-link;
+            font-size: 1.3em;
             font-style: oblique;
             &:hover{
                 text-decoration: underline;
-                color: #ffb523;
+                color: $more-link-hover;
             }
         }
     }
@@ -253,15 +263,16 @@ header{
             margin: 20px 20px;
             .tag-list-link{
                 text-decoration: none;
-                background: #FF5722;
+                background: $tag-list-link;
                 padding: 10px 20px;
                 color: #fff;
+                transition: background ease .2s;
                 &:hover{
-                    background: #E64A19;
+                    background: $tag-list-link-hover;
                 }
             }
             .tag-list-count{
-                background: #CDDC39;
+                background: $tag-list-count;
                 color: #fff;
                 padding: 10px 10px;
             }
@@ -281,18 +292,20 @@ header{
         border-bottom: 1px solid #ccc;
         width: 80%;
         text-align: center;
-        padding-bottom: 40px;
+        padding: 40px 0;
         a{
             text-decoration: none;
             color: #666;
         }
     }
     .archive_item{
+        color: #555555;
         .title{
-            color: #555555;
+            color: inherit;
             text-decoration: none;
+            transition: color ease .2s;
             &:hover{
-                color: #ff7423
+                color: $archive-item-hover;
             }
         }
         width: 80%;
@@ -328,8 +341,9 @@ header{
 
 .pagination{
     margin-top: 30px;
+    font-size: 1.2em;
     a{
-        color: #ff7b23;
+        color: $pagination-link;
         text-decoration: none;
         &:hover{
             text-decoration: underline;
@@ -337,6 +351,7 @@ header{
     }
     .page-number{
         margin:0 10px;
+        vertical-align: middle;
     }
     .prev{
         margin-right: 4px;
@@ -345,14 +360,14 @@ header{
         margin-left: 4px;
     }
     .current{
-        color: #ff3232;
-        font-size: 18px;
+        color: $pagination-current;
+        font-size: 1.4em;
         font-weight: 800;
     }
 }
 
 footer{
-    background: #171F26;
+    background: $footer;
     width: 100%;
     height: 60px;
     color: #B9BBBD;
