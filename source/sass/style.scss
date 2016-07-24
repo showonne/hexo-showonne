@@ -132,9 +132,19 @@ header{
                 text-decoration: none;
                 color: inherit;
                 padding-left: 20px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: pre;
+                @media screen and (max-width: 376px){
+                    padding-left: 0;
+                    font-size: 1.5em;
+                }
             }
             i{
                 font-size: 2em;
+                @media screen and (max-width: 376px){
+                    display: none;
+                }
             }
             span{
                 font-family: 'Georgia', "Hiragino Sans GB", serif;
