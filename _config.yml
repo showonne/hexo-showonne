@@ -1,0 +1,16 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /tags
+  About: /about
+
+# Author
+author: Showonne
+
+
+# Content
+excerpt_link: More +
+
+# highlight.js
+highlight_theme: tomorrow-night
