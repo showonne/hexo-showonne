@@ -1,5 +1,5 @@
-<% page.posts.each(function(post, index){ %>
-<%- partial('_partial/article', {post: post, index: true}) %>
+<% page.posts.each(function(post){ %>
+    <%- partial('_partial/article', {index: true, post: post}) %>
 <% }) %>
 <div class="pagination">
 	<%- paginator({ total: Math.ceil(site.posts.length / config.per_page)}) %>

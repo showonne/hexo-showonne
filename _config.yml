@@ -11,3 +11,6 @@ author: Showonne
 
 # Content
 excerpt_link: More +
+
+# highlight.js
+highlight_theme: zenburn
