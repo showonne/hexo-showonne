@@ -12,6 +12,7 @@ header{
     background: $header-bg;
     position: fixed;
     color: #fff;
+    z-index: 99999;
     .banner{
         position: absolute;
         left: 20px;
@@ -47,7 +48,7 @@ header{
             flex-flow: row nowrap;
             justify-content: space-around;
 
-            
+
         }
 
         &.hide{
@@ -110,7 +111,7 @@ header{
         min-height: 60px;
         margin: 20px 0;
         padding: 10px 10px;
-        
+
         .post-title{
             word-break: break-all;
             border-bottom: 1px solid #ccc;
@@ -189,8 +190,44 @@ header{
             padding: 40px 0;
             color: #555;
             line-height: 1.2;
+            h1{
+                font-size: 2em;
+                margin: .6em 0;
+            }
+            h2{
+                font-size: 1.8em;
+                margin: .5em 0;
+            }
+            h3{
+                font-size: 1.6em;
+                margin: .4em 0;
+            }
+            h4{
+                font-size: 1.4em;
+                margin: .3em 0;
+            }
+            h5{
+                font-size: 1.2em;
+                margin: .2em 0;
+            }
+            h6{
+                font-size: 1em;
+                margin: .1em 0;
+            }
             ul, ol{
                 padding-left: 16px;
+            }
+            table{
+                margin: 1em auto;
+                border: 1px solid #ccc;
+                th, td{
+                    padding: 1em;
+                    border: 1px solid #ccc;
+                }
+                th{
+                    font-weight: 800;
+                    font-family: -webkit-pictograph;
+                }
             }
             p{
                 font-size: 1.2em;
@@ -233,11 +270,20 @@ header{
                     line-height: 1.6em;
                     font-size: 1em;
                     background: inherit;
+                    display: flex;
+                    justify-content: space-around;
+                    strong{
+                        font-weight: 700;
+                        flex: 1;
+                    }
+                    cite{
+                        flex: 4;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: pre-line;
+                    }
                 }
-                strong{
-                    font-weight: 700;
-                    margin-right: 10px;
-                }
+
                 &.blockquote-center{
                     margin: 10px 10px;
                     padding: 20px 0;
