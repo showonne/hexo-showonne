@@ -1,15 +1,11 @@
 # OS X
-
 .DS_Store
 
 # node
-
 node_modules
 
 # sass
-
 .sass-cache
 
 #config
-
 _config.yml
