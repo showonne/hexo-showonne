@@ -217,7 +217,10 @@ header{
             ul, ol{
                 padding-left: 16px;
             }
-            table{
+            strong{
+                font-family: -webkit-pictograph;
+            }
+            &>table{
                 margin: 1em auto;
                 border: 1px solid #ccc;
                 th, td{
@@ -227,6 +230,7 @@ header{
                 th{
                     font-weight: 800;
                     font-family: -webkit-pictograph;
+                    background: #efefef;
                 }
             }
             p{
@@ -254,6 +258,26 @@ header{
                 &:hover{
                     color: $link-hover;
                 }
+            }
+            .pullquote{
+                margin: 0;
+                &.left{
+                    float: left;
+                    margin-right: .5em;
+                }
+                &.right{
+                    float: right;
+                    margin-left: .5em;
+                }
+            }
+            ul{
+                list-style: circle;
+            }
+            ol{
+                list-style: decimal;
+            }
+            dl dd{
+                margin-left: 2em;
             }
             blockquote{
                 padding: 0 20px;
@@ -296,8 +320,11 @@ header{
                 }
             }
             .video-container{
-                display: flex;
-                justify-content: center;
+                height: 300px;
+                iframe{
+                    height: 100%;
+                    width: 100%;
+                }
             }
         }
         .more{

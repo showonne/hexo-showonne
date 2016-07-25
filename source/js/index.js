@@ -11,4 +11,8 @@ window.onload = function(){
         menuList.classList.toggle('show')
     }
 
+    document.querySelectorAll('figure.highlight').forEach(function(i){
+        hljs.highlightBlock(i)
+    })
+
 }
