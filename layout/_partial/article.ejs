@@ -19,7 +19,7 @@
             <a href="<%- url_for(post.path) %>" class="more"><%= theme.excerpt_link %></a>
         <% } %>
     </article>
-<% }else{ %>
+<% }else if(post.title !== 'tags'){ %>
     <article>
         <h1 class='post-title'>
             <span><%= post.title %></span>
@@ -37,4 +37,6 @@
             </section>
         <% } %>
     </article>
+<% }else{ %>
+    <%- list_tags() %>
 <% } %>
