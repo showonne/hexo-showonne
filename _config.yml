@@ -2,6 +2,8 @@
 menu:
   Home: /
   Archives: /archives
+  Tags: /tags
+  About: /about
 
 # Author
 author: Showonne
