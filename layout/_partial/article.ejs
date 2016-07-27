@@ -19,7 +19,7 @@
             <a href="<%- url_for(post.path) %>" class="more"><%= theme.excerpt_link %></a>
         <% } %>
     </article>
-<% }else if(post.title !== 'tags'){ %>
+<% }else if(post.type !== 'tags'){ %>
     <article>
         <h1 class='post-title'>
             <span><%= post.title %></span>
