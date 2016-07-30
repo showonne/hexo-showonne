@@ -1,18 +1,18 @@
 window.onload = function(){
-    var menu = document.querySelector('.menu')
+    const menu = document.querySelector('.menu')
 
     menu.addEventListener('click', toogleList)
 
     function toogleList(){
 
-        var menuList = document.querySelector('.menu_list')
+        const menuList = document.querySelector('.menu_list')
 
         menuList.classList.toggle('hide')
         menuList.classList.toggle('show')
     }
 
-    document.querySelectorAll('figure.highlight').forEach(function(i){
-        hljs.highlightBlock(i)
-    })
+    const highloghtBlocks = document.querySelectorAll('figure.highlight')
+
+    highloghtBlocks.length && highloghtBlocks.forEach( i => hljs.highlightBlock(i) )
 
 }
