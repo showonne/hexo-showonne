@@ -1,42 +1,9 @@
 <% if(index){ %>
-    <article>
-        <% if(!post.link){ %><h4 class="post-title"><i class="iconfont">&#xe609;</i><a href="<%- url_for(post.path) %>"><%= /^\s*$/.test(post.title) ? ' ' : post.title %></a></h4><% }else{ %>
-            <h4 class="post-title"><i class="iconfont">&#xe609;</i><a href="<%- post.link %>" target="blank"><%= post.link.split('://')[1].replace(/\/\S*/, '') %></a></h4>
-        <% } %>
-        <h6 class="date"><i class="iconfont">&#xf0069;</i><%= post.date.format('YYYY-MM-DD') %></h6>
-        <%- list_tags(post.tags, {
-            show_count: false,
-            class: 'article-tag'
-        }) %>
-        <section class="md post-content">
-            <% if(!/^\s*$/.test(post.excerpt)){ %>
-                <%- post.excerpt %>
-            <% }else{ %>
-                <%- post.content %>
-            <% } %>
-        </section>
-        <% if(!/^\s*$/.test(post.excerpt)){ %>
-            <a href="<%- url_for(post.path) %>" class="more"><%= theme.excerpt_link %></a>
-        <% } %>
-    </article>
-<% }else if(post.type !== 'tags'){ %>
-    <article>
-        <h1 class='post-title'>
-            <span><%= post.title %></span>
-        </h1>
-        <section class='post-content'>
-            <%- post.content %>
-        </section>
-        <% if(post.comments){ %>
-            <section id="comments">
-            <% if (config.duoshuo_shortname){ %>
-                    <%- partial('_partial/duoshuo') %>
-                <% }else if(config.disqus_shortname){ %>
-                    <%- partial('_partial/disqus') %>
-                <% } %>
-            </section>
-        <% } %>
-    </article>
-<% }else{ %>
+    <%- partial('_partial/_article/index', {post: post}) %>
+<% } else if(post.type === 'tags'){ %>
     <%- list_tags() %>
+<% } else if(post.type === 'categories'){ %>
+    <%- list_categories() %>
+<% } else { %>
+    <%- partial('_partial/_article/detail', {post: post}) %>
 <% } %>

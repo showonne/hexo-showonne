@@ -1,0 +1,22 @@
+<article>
+    <h1 class='post-title'>
+        <span><%= post.title %></span>
+    </h1>
+    <section class='post-content'>
+        <% if(post.photos){ %>
+            <% for(var i = 0, len = post.photos.length; i < len; i++){ %>
+                <img class="gallery" src="<%=post.photos[i] %>">
+            <% } %>
+        <% } %>
+        <%- post.content %>
+    </section>
+    <% if(post.comments){ %>
+        <section id="comments">
+        <% if (config.duoshuo_shortname){ %>
+                <%- partial('_partial/_plugins/duoshuo') %>
+            <% }else if(config.disqus_shortname){ %>
+                <%- partial('_partial/_plugins/disqus') %>
+            <% } %>
+        </section>
+    <% } %>
+</article>

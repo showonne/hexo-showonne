@@ -4,7 +4,8 @@
   "description": "hexo theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node-sass source/sass/style.scss source/css/style.css --output-style compressed",
+    "dev": "node-sass source/sass/style.scss source/css/style.css --watch"
   },
   "keywords": [
     "hexo",

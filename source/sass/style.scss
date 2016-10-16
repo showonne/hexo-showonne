@@ -409,12 +409,15 @@ header{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    h1{
+        font-size: 1.8em;
+    }
     .tag_item{
         .title{
-            color: #555555;
+            color: inherit;
             text-decoration: none;
             &:hover{
-                color: #ff7423
+                color: $tag-item-hover;
             }
         }
         width: 80%;
@@ -422,6 +425,36 @@ header{
         border-bottom: 1px solid #ccc;
         .date{
             float: right;
+        }
+    }
+}
+
+.category-list{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 100px;
+    justify-content: flex-start;
+    padding: 0 40px;
+    .category-list-item{
+        margin: 20px 20px;
+        .category-list-link{
+            text-decoration: none;
+            background: $tag-list-link;
+            padding: 10px 20px;
+            color: #fff;
+            transition: background ease .2s;
+            &:hover{
+                background: $tag-list-link-hover;
+            }
+        }
+        .category-list-child{
+            padding: 5px 0;
+        }
+        .category-list-count{
+            background: $tag-list-count;
+            color: #fff;
+            padding: 10px 10px;
         }
     }
 }
@@ -468,3 +501,12 @@ footer{
         }
     }
 }
+
+.gallery{
+    max-width: 100%;
+}
+
+.line{
+    margin-right: 10px;
+}
+
