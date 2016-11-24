@@ -10,6 +10,11 @@ body{
     font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
 }
 
+::selection{
+    color: $document-bg;
+    background: $header-bg;
+}
+
 header{
     height: 50px;
     width: 100%;
@@ -101,7 +106,7 @@ header{
     min-height: 100%;
     width: 100%;
     overflow: hidden;
-    background: #fbfbfb;
+    background: $document-bg;
 
     @media screen and (max-width: 376px){
         padding-top: 80px;
