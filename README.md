@@ -3,7 +3,7 @@
 Hexo Theme
 
 ##Installation
-`$ git clone git@github.com:showonne/hexo_showonne.git themes/showonne`
+`$ git clone git@github.com:showonne/hexo-showonne.git themes/showonne`
 
 ##Usage
 Change setting `theme` to `showonne` in `config.yml`
