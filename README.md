@@ -1,4 +1,4 @@
-# hexo_showonne
+# hexo-showonne
 
 Hexo Theme
 
