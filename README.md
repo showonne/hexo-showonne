@@ -2,14 +2,14 @@
 
 Hexo Theme
 
-##Installation
+## Installation
 `$ git clone git@github.com:showonne/hexo-showonne.git themes/showonne`
 
-##Usage
+## Usage
 Change setting `theme` to `showonne` in `config.yml`
 
 Modify configurations in config.yml
 
-##Update
+## Update
     $ cd themes/showonne
     $ git pull
