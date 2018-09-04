@@ -71,6 +71,9 @@ body {
   color: #fbfbfb;
   background: #204264; }
 
+.hljs {
+  font-family: Monaco; }
+
 header {
   height: 50px;
   width: 100%;
